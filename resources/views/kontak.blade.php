@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -207,7 +208,8 @@
                                         </div>
                                         <div class="text pl-3">
                                             <p><span>Email:</span> <a
-                                                    href="mailto:klipaaindonesia19@gmail.com">klipaaindonesia19@gmail.com</a></p>
+                                                    href="mailto:klipaaindonesia19@gmail.com">klipaaindonesia19@gmail.com</a>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">
@@ -228,7 +230,7 @@
     </section>
     <!-- End | Kontak -->
 
-    
+
 
     <!-- Footer -->
     <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -282,6 +284,8 @@
     </div>
     <!-- End | Footer -->
 
+
+
     <!-- Java Script | Liblary -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -291,9 +295,14 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
 
+
+
     <!-- Java Script | Import -->
     <script src="js/main.js"></script>
     <script src="js/main.kontak.js"></script>
+
+
+    
 </body>
 
 </html>

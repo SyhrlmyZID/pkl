@@ -36,3 +36,7 @@ Route::get('/kontak', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/reset', function () {
+    return view('reset');
+});
