@@ -9,9 +9,24 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void 
     {
-        //
+        Schema::create('data_pka', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('tempat_tanggal_lahir');
+            $table->integer('nik');
+            $table->string('jabatan');
+            $table->string('no_hp');
+            $table->text('alamat');
+            $table->integer('no_sk_kades');
+            $table->date('tanggal_sk_kades');
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
+
+        });
     }
 
     /**
@@ -19,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('data_pka');
     }
 };

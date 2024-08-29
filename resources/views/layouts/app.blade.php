@@ -74,7 +74,7 @@
                 <div class="menu_title menu_1"></div>
 
                 <li class="item">
-                    <a href="/dashboard-aparat" class="nav_link_active">
+                    <a href="/data_aparat" class="nav_link">
                         <span class="navlink_icon">
                             <i class="bx bx-group"></i>
                         </span>
@@ -83,7 +83,7 @@
                 </li>
 
                 <li class="item">
-                    <a href="#" class="nav_link">
+                    <a href="/data_pka" class="nav_link">
                         <span class="navlink_icon">
                             <i class="bx bx-id-card"></i>
                         </span>
@@ -92,7 +92,7 @@
                 </li>
 
                 <li class="item">
-                    <a href="#" class="nav_link">
+                    <a href="/data_tpk" class="nav_link">
                         <span class="navlink_icon">
                             <i class="bx bx-user"></i>
                         </span>
@@ -101,7 +101,7 @@
                 </li>
 
                 <li class="item">
-                    <a href="#" class="nav_link">
+                    <a href="/data_penyedia" class="nav_link">
                         <span class="navlink_icon">
                             <i class="bx bx-file"></i>
                         </span>
@@ -116,7 +116,7 @@
                 <div class="menu_title menu_2"></div>
 
                 <li class="item">
-                    <a href="#" class="nav_link">
+                    <a href="bamusrenbangdes" class="nav_link">
                         <span class="navlink_icon">
                             <i class="bx bx-news"></i>
                         </span>

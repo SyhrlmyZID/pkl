@@ -10,12 +10,12 @@ class data_aparatController extends Controller
     public function index()
     {
         $data_aparat = data_aparat::where('userId', auth()->id())->get();
-        return view('data_umum.data-aparat', compact('data_aparat'));
+        return view('data_umum.data_aparat.data-aparat', compact('data_aparat'));
     }
 
     public function create()
     {
-        return view('data_umum.data-aparat');
+        return view('data_umum.data_aparat.data-aparat');
     }
 
     public function store(Request $request)
@@ -43,7 +43,7 @@ class data_aparatController extends Controller
             abort(403, 'Unauthorized access');
         }
 
-        return view('data_umum.data-aparat', compact('data_aparat'));
+        return view('data_umum.data_aparat.data-aparat', compact('data_aparat'));
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class data_aparatController extends Controller
             abort(403, 'Unauthorized access');
         }
 
-        return view('data_umum.edit', compact('data_aparat'));
+        return view('data_umum.data_aparat.edit', compact('data_aparat'));
     }
 
     public function update(Request $request, $id)

@@ -161,7 +161,6 @@ document
             .querySelector(".main-content")
             .classList.remove("sidebar-expanded");
     });
-
 //----------------------------------------------------//
 
 //-------------------|MAIN CONTENT|-------------------//

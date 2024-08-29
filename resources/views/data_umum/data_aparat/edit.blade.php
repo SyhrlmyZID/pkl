@@ -134,7 +134,7 @@ button:hover {
         @method('PUT')
         <div class="form-field">
             <label for="edit_nama">Nama</label>
-            <input type="text" id="edit_nama" name="nama" placeholder="Masukkan Nama">
+            <input type="text" id="edit_nama" name="nama" value="{{ $data_aparat->nama }}" placeholder="Masukkan Nama">
         </div>
 
         <div class="form-field">
@@ -148,27 +148,27 @@ button:hover {
 
         <div class="form-field">
             <label for="edit_tempat_tanggal_lahir">Tempat Tanggal Lahir</label>
-            <input type="text" id="edit_tempat_tanggal_lahir" name="tempat_tanggal_lahir" placeholder="Masukkan Tempat Tanggal Lahir">
+            <input type="text" id="edit_tempat_tanggal_lahir" name="tempat_tanggal_lahir" value="{{ $data_aparat->tempat_tanggal_lahir }}"placeholder="Masukkan Tempat Tanggal Lahir">
         </div>
 
         <div class="form-field">
             <label for="edit_nik">NIK Induk</label>
-            <input type="number" id="edit_nik" name="nik" placeholder="Masukkan NIK">
+            <input type="number" id="edit_nik" name="nik" value="{{ $data_aparat->nik }}" placeholder="Masukkan NIK">
         </div>
 
         <div class="form-field">
             <label for="edit_alamat">Alamat Lengkap</label>
-            <input type="text" id="edit_alamat" name="alamat" placeholder="Masukkan Alamat Lengkap">
+            <input type="text" id="edit_alamat" name="alamat" value="{{ $data_aparat->alamat }}"placeholder="Masukkan Alamat Lengkap">
         </div>
 
         <div class="form-field">
             <label for="edit_npwp">NPWP</label>
-            <input type="text" id="edit_npwp" name="npwp" placeholder="Masukkan NPWP">
+            <input type="text" id="edit_npwp" name="npwp" value="{{ $data_aparat->npwp }}" placeholder="Masukkan NPWP">
         </div>
 
         <div class="form-field">
             <label for="edit_no_hp">No. Hp</label>
-            <input type="text" id="edit_no_hp" name="no_hp" placeholder="Masukkan Nomor Hp">
+            <input type="text" id="edit_no_hp" name="no_hp" value="{{ $data_aparat->no_hp }}"placeholder="Masukkan Nomor Hp">
         </div>
 
         <div class="form-field">

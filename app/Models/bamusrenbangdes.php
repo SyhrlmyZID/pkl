@@ -8,12 +8,31 @@ use Illuminate\Database\Eloquent\Model;
 class bamusrenbangdes extends Model
 {
    
+    use HasFactory;
+
     protected $table = 'bamusrenbangdes';
+
 
     public $timestamps = false;
 
-    protected $fillable = ['tanggal', 'jam', 'tempat', 'bahas_kegiatan', 'materi_pembahasan', 'pimpinan_rapat', 'notulen', 'narasumber', 'ketua_bpd', 'wakil_masyarakat'];
+    protected $fillable = [
+        'tanggal',
+        'jam',
+        'tempat',
+        'bahas_kegiatan',
+        'materi_pembahasan',
+        'ketua_bpd',
+        'wakil_masyarakat',
+        'pimpinan_rapat',
+        'notulen',
+        'kesepakatan_akhir',
+        'userId',
+    ];
 
+    public function narasumbers()
+    {
+        return $this->hasMany(Narasumber::class, 'bamusrenbangdesId');
+    }
 }
 
 

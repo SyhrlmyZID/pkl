@@ -1,11 +1,17 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\data_pkaController;
+use App\Http\Controllers\data_tpkController;
 use App\Http\Controllers\data_desaController;
-use App\Http\Controllers\data_aparatController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\data_aparatController;
+use App\Http\Controllers\data_penyediaController;
+use App\Http\Controllers\bamusrenbangdesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +54,11 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/home', data_desaController::class);
 Route::resource('/data_aparat', data_aparatController::class);
-Route::get('/data_aparat/{id}/edit', [data_aparatController::class, 'edit'])->name('data_aparat.edit');
+Route::resource('/data_pka', data_pkaController::class);
+Route::resource('/data_tpk', data_tpkController::class);
+Route::resource('/data_penyedia', data_penyediaController::class);
+Route::resource('/bamusrenbangdes', bamusrenbangdesController::class);
+Route::get('/generate-pdf/{id}', [PDFController::class, 'make'])->name('make.pdf');
 
 
 

@@ -360,3 +360,16 @@ main.full-width {
 }
 
 /* |----------| END | MAIN CONTENT |----------| */
+
+
+.isi-lihat{
+  margin-top: 0.5rem; /* Menambahkan jarak atas pada teks nama */
+  font-size: 1.1rem; /* Membesarkan ukuran font untuk teks nama */
+  color: #333; /* Warna teks yang kontras */
+
+}
+
+.form-label {
+  font-weight: bold; /* Menebalkan teks label untuk memperjelas */
+  border-bottom: #000 1px solid; /* Menambahkan garis bawah pada label */;
+}

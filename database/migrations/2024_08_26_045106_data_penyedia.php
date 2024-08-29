@@ -11,7 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('data_penyedia', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('jenis_kelamin');
+            $table->string('tempat_tanggal_lahir');
+            $table->integer('nik');
+            $table->text('alamat');
+            $table->string('nama_perusahaan');
+            $table->text('alamat_perusahaan');
+            $table->string('no_hp');
+            $table->string('npwp');
+            $table->integer('nib');
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
+        });
     }
 
     /**
@@ -19,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('data_penyedia');
     }
 };
