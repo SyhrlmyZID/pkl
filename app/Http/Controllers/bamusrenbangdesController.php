@@ -52,6 +52,7 @@ class bamusrenbangdesController extends Controller
             Narasumber::create([
                 'bamusrenbangdesId' => $bamusrenbangdes->id,
                 'narasumber' => $narasumber,
+                'dari' => $narasumber,
             ]);
         }
     }
@@ -105,6 +106,7 @@ class bamusrenbangdesController extends Controller
             Narasumber::create([
                 'bamusrenbangdesId' => $bamusrenbangdes->id,
                 'narasumber' => $narasumber,
+                'dari' => $narasumber,
             ]);
         }
     }

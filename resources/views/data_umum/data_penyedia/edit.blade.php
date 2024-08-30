@@ -129,18 +129,72 @@ button:hover {
         </div>
     @endif
 
-    <form action="{{ route('data_pka.update', $data_pka->id) }}" method="POST">
+    <form action="{{ route('data_penyedia.update', $data_penyedia->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="form-field">
-            <label for="edit_nama">No SK Kades</label>
-            <input type="text" id="edit_nama" name="no_sk_kades" value="{{ $data_pka->no_sk_kades }}" placeholder="Masukkan No SK Kades">
-        </div>
+                        <div class="form-field">
+                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+                            <input type="text" name="nama" placeholder="Masukkan nama" value="{{ $data_penyedia->nama }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
 
-        <div class="form-field">
-            <label for="edit_nama">tanggal SK Kades</label>
-            <input type="text" id="edit_nama" name="tanggal_sk_kades" value="{{ $data_pka->tanggal_sk_kades }}" placeholder="Masukkan tanggal SK Kades">
-        </div>
+                        <div class="form-field">
+                            <label for="jenis_kelamin" class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+                            <select id="jenis_kelamin" name="jenis_kelamin" 
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="tempat_tanggal_lahir" class="block text-sm font-medium text-gray-700">Tempat Tanggal Lahir</label>
+                            <input type="text" name="tempat_tanggal_lahir" placeholder="Masukkan tempat_tanggal_lahir" value="{{ $data_penyedia->tempat_tanggal_lahir }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="nik" class="block text-sm font-medium text-gray-700">Nomor Induk</label>
+                            <input type="number" name="nik" placeholder="Masukkan nik" value="{{ $data_penyedia->nik }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
+                            <input type="text" name="alamat" placeholder="Masukkan alamat" value="{{ $data_penyedia->alamat }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="nama_perusahaan" class="block text-sm font-medium text-gray-700">Nama Perusahaan</label>
+                            <input type="text" name="nama_perusahaan" placeholder="Masukkan nama_perusahaan" value="{{ $data_penyedia->nama_perusahaan }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="alamat_perusahaan" class="block text-sm font-medium text-gray-700">Alamat Perusahaan</label>
+                            <input type="text" name="alamat_perusahaan" placeholder="Masukkan alamat_perusahaan" value="{{ $data_penyedia->alamat_perusahaan }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="no_hp" class="block text-sm font-medium text-gray-700">NO HP</label>
+                            <input type="text" name="no_hp" placeholder="Masukkan no_hp" value="{{ $data_penyedia->no_hp }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="npwp" class="block text-sm font-medium text-gray-700">NPWP</label>
+                            <input type="text" name="npwp" placeholder="Masukkan npwp" value="{{ $data_penyedia->npwp }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="nib" class="block text-sm font-medium text-gray-700">NIB</label>
+                            <input type="number" name="nib" placeholder="Masukkan nib" value="{{ $data_penyedia->nib }}"
+                                class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
 
         <button type="submit">Update</button>
     </form>

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('bamusrenbangdesId');
             $table->string('narasumber');
+            $table->string('dari');
             $table->timestamps();
 
             $table->foreign('bamusrenbangdesId')->references('id')->on('bamusrenbangdes')->onDelete('cascade'); // Add foreign key constraint

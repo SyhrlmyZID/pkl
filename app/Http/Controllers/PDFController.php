@@ -25,5 +25,20 @@ $desa = data_desa::where('userId', $id)->first();
         return $pdf->download('laporan bamusrenbangdes tanggal' . $data->tanggal . '.pdf');
     }
 
+    public function preview($id)
+    {
+        $data = bamusrenbangdes::find($id);
+        $id = Auth::id();
+        $desa = data_desa::where('userId', $id)->first();
+
+        // Tampilkan HTML untuk preview
+        $pdf = PDF::loadView('perencanaan.bamusrenbangdes.form', compact('data', 'desa'));
+        
+        // Set ukuran kertas ke A4 untuk preview
+        $pdf->setPaper('A4', 'portrait');
+        
+        return $pdf->stream('preview.pdf');
+    }
+
     
 }

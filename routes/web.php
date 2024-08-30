@@ -58,7 +58,7 @@ Route::resource('/data_pka', data_pkaController::class);
 Route::resource('/data_tpk', data_tpkController::class);
 Route::resource('/data_penyedia', data_penyediaController::class);
 Route::resource('/bamusrenbangdes', bamusrenbangdesController::class);
-Route::get('/generate-pdf/{id}', [PDFController::class, 'make'])->name('make.pdf');
+Route::get('/generate-pdf/{id}', [PDFController::class, 'preview'])->name('make.pdf');
 
 
 

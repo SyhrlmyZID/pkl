@@ -17,6 +17,7 @@ class narasumber extends Model
     protected $fillable = [
         'bamusrenbangdesId',
         'narasumber',
+        'dari',
     ];
 
     public function bamusrenbangdes()

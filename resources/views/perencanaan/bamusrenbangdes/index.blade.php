@@ -180,7 +180,10 @@
                         <div id="narasumber-container">
                             <label for="narasumber" class="block text-sm font-medium text-gray-700">Narasumber</label>
                             <div class="flex">
-                                <input type="text" name="narasumber[]" required placeholder="Masukkan nama narasumber"
+                                <input type="text" name="narasumber[]" required placeholder=" nama narasumber"
+                                    class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" style="margin-right: 10px;">
+                                    <h6 style="margin-right: 10px; margin-top: 25px;">Dari</h6>
+                                <input type="text" name="dari[]" required placeholder="asal narasumber"
                                     class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                                 <button type="button" onclick="addNarasumber()" class="ml-2 bg-blue-500 text-white px-3 py-2 rounded-md">+</button>
                             </div>
@@ -259,7 +262,7 @@
               <div class="mb-3">
                     <label {{ $data->id }} class="form-label">Narasumber</label>
                     @foreach($data->narasumbers as $n)
-                    <p>Nama Narasumber: {{ $n->narasumber }}</p>
+                    <p>Nama Narasumber: {{ $n->narasumber }} Dari {{ $n->dari }}</p>
                     @endforeach
               </div>
             </form>
@@ -282,7 +285,9 @@
         var container = document.getElementById('narasumber-container');
         var input = document.createElement('div');
         input.classList.add('flex', 'mt-2');
-        input.innerHTML = '<input type="text" name="narasumber[]" required placeholder="Masukkan nama narasumber" class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">' +
+        input.innerHTML = '<input type="text" name="narasumber[]" required placeholder=" nama narasumber" class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" style="margin-right: 10px;">' +
+        '<h6 style="margin-right: 10px; margin-top: 25px;">Dari</h6>' +
+        '<input type="text" name="dari[]" required placeholder=" asal narasumber" class="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">' +
                           '<button type="button" onclick="removeNarasumber(this)" class="ml-2 bg-red-500 text-white px-3 py-2 rounded-md">-</button>';
         container.appendChild(input);
     }
