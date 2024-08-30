@@ -251,11 +251,11 @@
               </div>
               <div class="mb-3">
                     <label {{ $data->id }} class="form-label">No SK Kades</label>
-                    <p class="isi-lihat">{{ $data->no_sk_kades }}</p>
+                    <p class="isi-lihat">{{ $data->no_sk_desa }}</p>
               </div>
               <div class="mb-3">
                     <label {{ $data->id }} class="form-label">Tanggal SK Kades</label>
-                    <p class="isi-lihat">{{ $data->tanggal_sk_kades }}</p>
+                    <p class="isi-lihat">{{ $data->tanggal_sk_desa }}</p>
               </div>
             </form>
           </div>

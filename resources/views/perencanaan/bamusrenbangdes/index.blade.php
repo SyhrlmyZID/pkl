@@ -75,8 +75,11 @@
                                 <button type="submit" class="text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400" onclick="return confirm('Yakin ingin menghapus?')">
                                 <i class="fas fa-trash"></i>
                                 </button>
-
-                                <a href="{{ route('make.pdf', $data->id) }}">Cetak PDF</a>
+                                <a href="{{ route('make.pdf', $data->id) }}" 
+       class="mx-2 text-yellow-600 dark:text-yellow-500 hover:text-yellow-700 dark:hover:text-yellow-400"
+       title="print Data">
+       <i class="fas fa-print"></i>
+    </a>
                             </form>
                                     </td>
                                     

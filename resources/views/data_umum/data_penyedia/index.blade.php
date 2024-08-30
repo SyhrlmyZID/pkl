@@ -10,7 +10,7 @@
             <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-5">
                     <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Data TPK Desa</h2>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Data Penyedia </h2>
 
 
                         <!-- Tambah Data -->
@@ -216,7 +216,7 @@
           </div>
           <div class="modal-body">
             
-            <form action="{{ route('data_pka.show', $data->id) }}" method="get" enctype="multipart/form-data">
+            <form action="{{ route('data_penyedia.show', $data->id) }}" method="get" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label {{ $data->id }} class="form-label">Nama</label>
                     <p class="isi-lihat">{{ $data->nama }}</p>
@@ -230,29 +230,32 @@
                     <p class="isi-lihat">{{ $data->tempat_tanggal_lahir }}</p>
               </div>
               <div class="mb-3">
-                    <label {{ $data->id }} class="form-label">Alamat Lengkap</label>
-                    <p class="isi-lihat">{{ $data->alamat }}</p>
-              </div>
-              <div class="mb-3">
                     <label {{ $data->id }} class="form-label">Nomor Induk</label>
                     <p class="isi-lihat">{{ $data->nik }}</p>
               </div>
-              
               <div class="mb-3">
-                    <label {{ $data->id }} class="form-label">NO.HP</label>
+                    <label {{ $data->id }} class="form-label">Alamat</label>
+                    <p class="isi-lihat">{{ $data->alamat }}</p>
+              </div>
+              <div class="mb-3">
+                    <label {{ $data->id }} class="form-label">Nama Perusahaan</label>
+                    <p class="isi-lihat">{{ $data->nama_perusahaan }}</p>
+              </div>
+              <div class="mb-3">
+                    <label {{ $data->id }} class="form-label">Alamat Perusahaan</label>
+                    <p class="isi-lihat">{{ $data->alamat_perusahaan }}</p>
+              </div>
+              <div class="mb-3">
+                    <label {{ $data->id }} class="form-label">NO HP</label>
                     <p class="isi-lihat">{{ $data->no_hp }}</p>
               </div>
               <div class="mb-3">
-                    <label {{ $data->id }} class="form-label">Jabatan</label>
-                    <p class="isi-lihat">{{ $data->jabatan }} TPK</p>
+                    <label {{ $data->id }} class="form-label">NPWP</label>
+                    <p class="isi-lihat">{{ $data->npwp }}</p>
               </div>
               <div class="mb-3">
-                    <label {{ $data->id }} class="form-label">No SK Kades</label>
-                    <p class="isi-lihat">{{ $data->no_sk_kades }}</p>
-              </div>
-              <div class="mb-3">
-                    <label {{ $data->id }} class="form-label">Tanggal SK Kades</label>
-                    <p class="isi-lihat">{{ $data->tanggal_sk_kades }}</p>
+                    <label {{ $data->id }} class="form-label">NIB</label>
+                    <p class="isi-lihat">{{ $data->nib }}</p>
               </div>
             </form>
           </div>
